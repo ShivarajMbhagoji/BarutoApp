@@ -1,9 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
-    id ("kotlinx-serialization")
+    id("org.jetbrains.kotlin.kapt")
+//    id("com.google.dagger.hilt.android")
+//    id ("kotlinx-serialization")
 }
 
 android {
@@ -59,7 +59,7 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation("androidx.activity:activity-compose:1.9.0")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -77,45 +77,45 @@ dependencies {
 
 
 
-    val nav_version = "2.7.7"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    implementation("androidx.navigation:navigation-compose:2.7.7")
 
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
     implementation("androidx.room:room-ktx:$room_version")
-
+//
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
-
+//
 //   paging 3
     implementation("androidx.paging:paging-compose:3.3.0-alpha05")
-
-//    Kotlin serialization
+//
+////    Kotlin serialization
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-
-//    datastore preferences
+//
+////    datastore preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
-
-//    dagger-hilt
+//
+////    dagger-hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
-
-    // Coil
+//
+//    // Coil
     implementation("io.coil-kt:coil-compose:2.6.0")
-
-    // Horizontal Pager and Indicators - Accompanist
+//
+//    // Horizontal Pager and Indicators - Accompanist
     implementation("com.google.accompanist:accompanist-pager:0.35.0-alpha")
     implementation("com.google.accompanist:accompanist-pager-indicators:0.13.0")
-
-    // Swipe to Refresh - Accompanist
+//
+//    // Swipe to Refresh - Accompanist
     implementation("com.google.accompanist:accompanist-swiperefresh:0.35.0-alpha")
-
-    // System UI Controller - Accompanist
+//
+//    // System UI Controller - Accompanist
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.35.0-alpha")
-
-    // Palette API
+//
+//    // Palette API
     implementation("androidx.palette:palette:1.0.0")
 
 
